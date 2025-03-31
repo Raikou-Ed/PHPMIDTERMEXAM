@@ -10,14 +10,12 @@ class ProductController {
         $this->productRepository = new ProductRepository();
     }
 
-    public function GetAllProduct() 
-    {
-        // Return All ProductId, ProductName, ProductPrice, ProductDate and its Prices
+    public function GetAllProduct() {
+        echo json_encode($this->productRepository->GetAllProduct());
     }
 
-    public function GetLatestPriceOfTheProduct() 
-    {
-        // Return Products with Latest Price
+    public function GetLatestPriceOfTheProduct() {
+        echo json_encode($this->productRepository->GetLatestPriceOfTheProduct());
     }
 
     public function GetProductById($productId) 
